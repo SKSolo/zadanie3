@@ -1,0 +1,85 @@
+<html>
+<head>
+    <script>
+        function sprawdz(){
+
+            var fullName = document.getElementById("imie").value;
+            if (fullName.match(/^[A-Z][a-z]+$/)){
+                document.getElementById("imie").style.backgroundColor='green';
+            }
+            else
+            {
+                document.getElementById("imie").style.backgroundColor='red';
+            }
+                /////////////
+            var naz = document.getElementById("nazwisko").value;
+            if (naz.match(/^[A-Z][a-z]+$/)){
+                document.getElementById("nazwisko").style.backgroundColor='green';
+            }
+            else
+            {
+                document.getElementById("nazwisko").style.backgroundColor='red';
+            }
+                /////////////
+            var fullName = document.getElementById("imie").value;
+            if (fullName.match(/^[A-Z][a-z]+$/)){
+                document.getElementById("imie").style.backgroundColor='green';
+            }
+            else
+            {
+                document.getElementById("imie").style.backgroundColor='red';
+            }
+                ////////////
+             var pocztowy = document.getElementById("kod").value;
+			 if (pocztowy.match(/[0-9]{2}-[0-9]{3}/)){
+                document.getElementById("kod").style.backgroundColor='green';
+             }
+             else
+             {
+                 document.getElementById("kod").style.backgroundColor='red';
+             }
+                ////////////
+            var miejsce= document.getElementById("miasto").value;
+            if (miejsce.match(/^([A-Z][a-z]+[A-Z][a-z])|( [A-Z][a-z])+$/)){
+                 document.getElementById("miasto").style.backgroundColor='red';
+			}
+            else
+            {
+                document.getElementById("miasto").style.backgroundColor='green';
+            }
+                ////////////
+            var mail = document.getElementById("email").value;
+            if (mail.match(/^([a-z]+@[a-z]+\.pl)|([a-z]+@[a-z]+\.[a-z]+.pl)|([a-z]+@[a-z]+\.com)| ([a-z]+@[a-z]+\.eu)/)){
+                document.getElementById("email").style.backgroundColor='green';
+			}
+            else
+            {
+                document.getElementById("email").style.backgroundColor='red';
+            }
+            var tel = document.getElementById("telefon").value;
+            if (tel.match(/[0-9]{3}-[0-9]{3}-[0-9]{3}/)){
+                document.getElementById("telefon").style.backgroundColor='red';
+			}
+            else
+            {
+                document.getElementById("telefon").style.backgroundColor='green';
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <input type="text" id="imie" placeholder="Wpisz swoje imie" onkeyup="sprawdz()"></br></br>
+    <input type="text" id="nazwisko" placeholder="Wpisz swoje nazwisko" onkeyup="sprawdz()"></br></br>
+    <input type="text" id="kod" placeholder="Kod Pocztowy" onkeyup="sprawdz()"></br></br>
+    <input type="text" id="miasto" placeholder="Miasto" onkeyup="sprawdz()"></br></br>
+    <input type="email" id="email" placeholder="Podaj Email" onkeyup="sprawdz()"></br></br>
+    <input type="tel" id="telefon" placeholder="Numer Telefonu" onkeyup="sprawdz()"></br></br>
+
+  
+    
+
+</body>
+
+</html>
